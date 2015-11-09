@@ -173,7 +173,7 @@ int main(void)
         {
             break;
         }
-        printListForward();
+        //printListForward();
     }
 
 }

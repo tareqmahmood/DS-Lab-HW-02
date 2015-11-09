@@ -90,12 +90,18 @@ void printList()
 int insertLast(int item)
 {
     //write your codes here
-    if(tail == 0) return NULL_VALUE;
     struct listNode * newNode = (struct listNode *) malloc(sizeof(struct listNode));
     newNode->item = item;
     newNode->next = 0;
-    tail->next = newNode;
-    tail = newNode;
+    if(tail == 0)
+    {
+        tail = list = newNode;
+    }
+    else
+    {
+        tail->next = newNode;
+        tail = newNode;
+    }
     return SUCCESS_VALUE;
 }
 
